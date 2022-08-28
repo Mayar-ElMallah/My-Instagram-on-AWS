@@ -1,7 +1,7 @@
 "use strict";
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function ful_filled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
         function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
         function step(result) { result.done ? resolve(result.value) : new P(function (resolve) { resolve(result.value); }).then(fulfilled, rejected); }
         step((generator = generator.apply(thisArg, _arguments || [])).next());
@@ -13,40 +13,40 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const fs_1 = __importDefault(require("fs"));
 const Jimp = require("jimp");
-// filterImageFromURL
-// helper function to download, filter, and save the filtered image locally
+//Filter_Image_From_URL
+// Helper function to download, filter, and save image which is filtered locally
 // returns the absolute path to the local image
-// INPUTS
-//    inputURL: string - a publicly accessible url to an image file
-// RETURNS
+/**************************INPUTS**************/
+//    inputURL: string - accesibility of URL to an image file IS PUBLIC
+/***************RETURNS********************/
 //    an absolute path to a filtered image locally saved file
-function filterImageFromURL(inputURL) {
+function filter_Image_FromP_URL(input_URL) {
     return __awaiter(this, void 0, void 0, function* () {
         return new Promise((resolve) => __awaiter(this, void 0, void 0, function* () {
-            const photo = yield Jimp.read(inputURL);
-            const outpath = '/tmp/filtered.' + Math.floor(Math.random() * 2000) + '.jpg';
-            yield photo
+            const image = yield Jimp.read(input_URL);
+            const out_path = '/tmp/filtered.' + Math.floor(Math.random() * 2000) + '.jpg';
+            yield image
                 .resize(256, 256) // resize
-                .quality(60) // set JPEG quality
+                .quality(61) // set JPEG quality
                 .greyscale() // set greyscale
-                .write(__dirname + outpath, (img) => {
-                resolve(__dirname + outpath);
+                .write(__dirname + out_path, (img) => {
+                resolve(__dirname + out_path);
             });
         }));
     });
 }
-exports.filterImageFromURL = filterImageFromURL;
-// deleteLocalFiles
-// helper function to delete files on the local disk
-// useful to cleanup after tasks
-// INPUTS
+exports.filter_Image_From_URL = filter_Image_From_URL;
+/***************DeleteLocalFiles**************?
+// Helper function to delete files on the local disk
+// useful to cleanup after finishing
+/*****************INPUTS*******************/
 //    files: Array<string> an array of absolute paths to files
-function deleteLocalFiles(files) {
+function delete_Local_Files(files) {
     return __awaiter(this, void 0, void 0, function* () {
         for (let file of files) {
             fs_1.default.unlinkSync(file);
         }
     });
 }
-exports.deleteLocalFiles = deleteLocalFiles;
+exports.delete_Local_Files = delete_Local_Files;
 //# sourceMappingURL=util.js.map
