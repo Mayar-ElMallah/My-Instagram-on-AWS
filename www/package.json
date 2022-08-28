@@ -1,5 +1,5 @@
 {
-  "name": "udacity-c2-image-filter",
+  "name": "udacity-c2-imageFilter",
   "version": "1.0.0",
   "description": "",
   "main": "node server.js",
