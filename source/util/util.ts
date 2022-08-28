@@ -1,33 +1,34 @@
 import fs from 'fs';
 import Jimp = require('jimp');
 
-// filterImageFromURL
-// helper function to download, filter, and save the filtered image locally
-// returns the absolute path to the local image
-// INPUTS
-//    inputURL: string - a publicly accessible url to an image file
-// RETURNS
-//    an absolute path to a filtered image locally saved file
-export async function filterImageFromURL(inputURL: string): Promise<string>{
+// filter_Image_From_URL
+// Helper function in order to download, filter, & save the filtered image locally
+// return the path to the local image
+/*****************INPUTS************************/
+//InputURL: string - the accessibility of URL is public to an image file
+/*****************Return********************/
+// RETURNS: an absolute path to a filtered image locally saved file
+
+export async function filter_Image_From_URL(input_URL: string): Promise<string>{
     return new Promise( async resolve => {
-        const photo = await Jimp.read(inputURL);
-        const outpath = '/tmp/filtered.'+Math.floor(Math.random() * 2000)+'.jpg';
-        await photo
+        const image = await Jimp.read(input_URL);
+        const out_path = '/tmp/filtered.'+Math.floor(Math.random() * 2000)+'.jpg';
+        await image
         .resize(256, 256) // resize
-        .quality(60) // set JPEG quality
+        .quality(61) // set JPEG quality
         .greyscale() // set greyscale
-        .write(__dirname+outpath, (img)=>{
-            resolve(__dirname+outpath);
+        .write(__dirname+out_path, (img)=>{
+            resolve(__dirname+out_path);
         });
     });
 }
 
-// deleteLocalFiles
-// helper function to delete files on the local disk
-// useful to cleanup after tasks
-// INPUTS
-//    files: Array<string> an array of absolute paths to files
-export async function deleteLocalFiles(files:Array<string>){
+// delete_Local_Files
+// Helper function to delete files on the local device
+// useful to clean-up after finishing tasks
+/**********************INPUTS****************/
+//files: Array<string> an array of paths to files
+export async function delete_Local_Files(files:Array<string>){
     for( let file of files) {
         fs.unlinkSync(file);
     }
