@@ -29,20 +29,4 @@ Follow the process which is described in the course to `eb init` a new applicati
 
 ![image]([https://github.com/sdkdeepa/Udacity-udagram-project2/blob/main/deployment_screenshots/Output%20URL.png](https://github.com/Mayar-ElMallah/My-Instagram-on-AWS/blob/main/deploymentScreenshots/Output_URL.png)
 
-http://udagram-project-deepa-dev-dev.us-east-2.elasticbeanstalk.com/filteredimage?image_url=https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_tabby_and_white_kitten_n01.jpg
-
-## Stand Out (Optional)
-
-### Refactor the course RESTapi
-
-If you're feeling up to it, refactor the course RESTapi to make a request to your newly provisioned image server.
-
-### Authentication
-
-Prevent requests without valid authentication headers.
-> !!NOTE if you choose to submit this, make sure to add the token to the postman collection and export the postman collection file to your submission so we can review!
-
-### Custom Domain Name
-
-Add your own domain name and have it point to the running services (try adding a subdomain name to point to the processing server)
-> !NOTE: Domain names are not included in AWS’ free tier and will incur a cost.
+http://udagram-project-mayar-dev-dev.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_tabby_and_white_kitten_n01.jpg
