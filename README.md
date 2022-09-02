@@ -27,6 +27,6 @@ Follow the process which is described in the course to `eb init` a new applicati
 
 ### The URL
 
-![image]([https://github.com/sdkdeepa/Udacity-udagram-project2/blob/main/deployment_screenshots/Output%20URL.png](https://github.com/Mayar-ElMallah/My-Instagram-on-AWS/blob/main/deploymentScreenshots/Output_URL.png)
+![image](https://github.com/Mayar-ElMallah/My-Instagram-on-AWS/blob/main/deploymentScreenshots/Output_URL.png)
 
-http://udagram-project-mayar-dev-dev.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_tabby_and_white_kitten_n01.jpg
+http://udagram-project-deepa-dev-dev.us-east-2.elasticbeanstalk.com/filteredimage?image_url=https://upload.wikimedia.org/wikipedia/commons/b/bd/Golden_tabby_and_white_kitten_n01.jpg
