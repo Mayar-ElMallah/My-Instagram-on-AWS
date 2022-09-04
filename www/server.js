@@ -34,7 +34,7 @@ const util1 = require("./util/util");
     // RETURNS
     //   the filtered image file [!!TIP res.sendFile(filteredpath); might be useful]
     /**************************************************************************** */
-    application.get("/filteredImage", (req, res) => __awaiter(this, void 0, void 0, function* () {
+    application.get("/filteredImage", (req: express.Request, res: express.Response) => __awaiter(this, void 0, void 0, function* () {
         const image_Url = req.query.image_url;
         if (image_Url) {
             util1.filter_Image_From_URL(image_Url).then((response) => {
