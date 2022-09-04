@@ -29,7 +29,7 @@ import { reduce } from 'bluebird';
 
   /**************************************************************************** */
 
-  application.get("/filteredImage", async (req, res) => {
+  application.get("/filteredImage", async (req: express.Request, res: express.Response) => {
 
     const image_Url = req.query.image_url;
     if (image_Url) {
